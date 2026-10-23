@@ -1,0 +1,902 @@
+{
+  "model_version": "dintel-core-v1.0.0",
+  "dataset_version": "crisismmd-v2.0-datasplit-all",
+  "trained_at": "2026-09-05T10:59:58.728593Z",
+  "git_commit": "unavailable",
+  "vectorizer": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_features": 40000,
+    "sublinear_tf": true,
+    "vocab_size": 24715,
+    "event_name_masking": true
+  },
+  "candidates": [
+    "tfidf_logreg",
+    "tfidf_logreg_balanced",
+    "tfidf_linearsvm",
+    "tfidf_linearsvm_balanced"
+  ],
+  "selection_rule": "highest dev macro-F1 (test untouched)",
+  "tasks": {
+    "informative": {
+      "n_train": 11579,
+      "n_dev": 2237,
+      "classes": [
+        "informative",
+        "not_informative"
+      ],
+      "train_distribution": {
+        "informative": 8282,
+        "not_informative": 3297
+      },
+      "dev_candidates": {
+        "tfidf_logreg": {
+          "accuracy": 0.8095663835493965,
+          "macro_precision": 0.7941147328388873,
+          "macro_recall": 0.7003454094292804,
+          "macro_f1": 0.7241105176854237,
+          "weighted_precision": 0.8042616252216369,
+          "weighted_recall": 0.8095663835493965,
+          "weighted_f1": 0.7918574571293926,
+          "roc_auc": 0.8468873449131514,
+          "pr_auc": 0.9227843412531004
+        },
+        "tfidf_logreg_balanced": {
+          "accuracy": 0.8050961108627627,
+          "macro_precision": 0.7579446528765938,
+          "macro_recall": 0.7594516129032258,
+          "macro_f1": 0.7586891806834961,
+          "weighted_precision": 0.8056764364995155,
+          "weighted_recall": 0.8050961108627627,
+          "weighted_f1": 0.8053799452981099,
+          "roc_auc": 0.845079900744417,
+          "pr_auc": 0.9222671206592455
+        },
+        "tfidf_linearsvm": {
+          "accuracy": 0.8037550290567724,
+          "macro_precision": 0.7750826432888788,
+          "macro_recall": 0.7021910669975187,
+          "macro_f1": 0.7229705732593681,
+          "weighted_precision": 0.7948864534728614,
+          "weighted_recall": 0.8037550290567724,
+          "weighted_f1": 0.7889757536170156,
+          "roc_auc": 0.8397191066997518,
+          "pr_auc": 0.9179865545222318
+        },
+        "tfidf_linearsvm_balanced": {
+          "accuracy": 0.7966025927581583,
+          "macro_precision": 0.7474301414591898,
+          "macro_recall": 0.7467007444168734,
+          "macro_f1": 0.7470632337566776,
+          "weighted_precision": 0.7963054782487989,
+          "weighted_recall": 0.7966025927581583,
+          "weighted_f1": 0.7964524734884568,
+          "roc_auc": 0.8382024813895782,
+          "pr_auc": 0.9180624079101591
+        }
+      },
+      "selected": "tfidf_logreg_balanced",
+      "dev_metrics_selected": {
+        "accuracy": 0.8050961108627627,
+        "macro_precision": 0.7579446528765938,
+        "macro_recall": 0.7594516129032258,
+        "macro_f1": 0.7586891806834961,
+        "weighted_precision": 0.8056764364995155,
+        "weighted_recall": 0.8050961108627627,
+        "weighted_f1": 0.8053799452981099,
+        "per_class": {
+          "informative": {
+            "precision": 0.8661270236612703,
+            "recall": 0.8629032258064516,
+            "f1": 0.8645121193287756,
+            "support": 1612
+          },
+          "not_informative": {
+            "precision": 0.6497622820919176,
+            "recall": 0.656,
+            "f1": 0.6528662420382165,
+            "support": 625
+          }
+        },
+        "confusion_matrix": {
+          "labels": [
+            "informative",
+            "not_informative"
+          ],
+          "matrix": [
+            [
+              1391,
+              221
+            ],
+            [
+              215,
+              410
+            ]
+          ]
+        },
+        "roc_auc": 0.845079900744417,
+        "pr_auc": 0.9222671206592455
+      },
+      "calibration": {
+        "method": "temperature_scaling",
+        "fit_on": "dev",
+        "temperature": 0.8550000000000001,
+        "dev_ece_uncalibrated": 0.0378501295005087,
+        "dev_ece_calibrated": 0.02676179911762223,
+        "dev_brier_uncalibrated": 0.2793609771294867,
+        "dev_brier_calibrated": 0.2770717386225784,
+        "reliability_diagram_dev": [
+          {
+            "bin_lower": 0.4666666666666667,
+            "bin_upper": 0.5333333333333333,
+            "count": 106,
+            "avg_confidence": 0.5152451014002934,
+            "accuracy": 0.5943396226415094
+          },
+          {
+            "bin_lower": 0.5333333333333333,
+            "bin_upper": 0.6,
+            "count": 198,
+            "avg_confidence": 0.5664634482756288,
+            "accuracy": 0.5252525252525253
+          },
+          {
+            "bin_lower": 0.6,
+            "bin_upper": 0.6666666666666666,
+            "count": 187,
+            "avg_confidence": 0.6365322863199566,
+            "accuracy": 0.6524064171122995
+          },
+          {
+            "bin_lower": 0.6666666666666666,
+            "bin_upper": 0.7333333333333333,
+            "count": 231,
+            "avg_confidence": 0.6979829687040425,
+            "accuracy": 0.683982683982684
+          },
+          {
+            "bin_lower": 0.7333333333333333,
+            "bin_upper": 0.8,
+            "count": 265,
+            "avg_confidence": 0.7673932913580188,
+            "accuracy": 0.8
+          },
+          {
+            "bin_lower": 0.8,
+            "bin_upper": 0.8666666666666667,
+            "count": 328,
+            "avg_confidence": 0.8348827212286785,
+            "accuracy": 0.8780487804878049
+          },
+          {
+            "bin_lower": 0.8666666666666667,
+            "bin_upper": 0.9333333333333333,
+            "count": 446,
+            "avg_confidence": 0.9028811701450105,
+            "accuracy": 0.9103139013452914
+          },
+          {
+            "bin_lower": 0.9333333333333333,
+            "bin_upper": 1.0,
+            "count": 476,
+            "avg_confidence": 0.964297460178008,
+            "accuracy": 0.9411764705882353
+          }
+        ]
+      }
+    },
+    "humanitarian_category": {
+      "n_train": 11580,
+      "n_dev": 2237,
+      "classes": [
+        "Affected individuals",
+        "Infrastructure and utility damage",
+        "Injured or dead people",
+        "Missing or found people",
+        "Not humanitarian",
+        "Other relevant information",
+        "Rescue, volunteering or donation effort",
+        "Vehicle damage"
+      ],
+      "train_distribution": {
+        "Other relevant information": 4266,
+        "Infrastructure and utility damage": 882,
+        "Not humanitarian": 3297,
+        "Affected individuals": 338,
+        "Rescue, volunteering or donation effort": 2384,
+        "Injured or dead people": 346,
+        "Vehicle damage": 39,
+        "Missing or found people": 28
+      },
+      "dev_candidates": {
+        "tfidf_logreg": {
+          "accuracy": 0.6432722396066161,
+          "macro_precision": 0.475989262444246,
+          "macro_recall": 0.37209759290569755,
+          "macro_f1": 0.39833973452270605,
+          "weighted_precision": 0.6436578819580033,
+          "weighted_recall": 0.6432722396066161,
+          "weighted_f1": 0.628570134756552
+        },
+        "tfidf_logreg_balanced": {
+          "accuracy": 0.6544479213232007,
+          "macro_precision": 0.45443025248091024,
+          "macro_recall": 0.4620720659678843,
+          "macro_f1": 0.4569892240114803,
+          "weighted_precision": 0.6558884143183404,
+          "weighted_recall": 0.6544479213232007,
+          "weighted_f1": 0.6533768828208936
+        },
+        "tfidf_linearsvm": {
+          "accuracy": 0.6508717031738936,
+          "macro_precision": 0.4894611684308874,
+          "macro_recall": 0.40236020747871953,
+          "macro_f1": 0.4232356395390497,
+          "weighted_precision": 0.6488660046368032,
+          "weighted_recall": 0.6508717031738936,
+          "weighted_f1": 0.6378363291343675
+        },
+        "tfidf_linearsvm_balanced": {
+          "accuracy": 0.6607063030844882,
+          "macro_precision": 0.5232709078527635,
+          "macro_recall": 0.5019208929880913,
+          "macro_f1": 0.5060875911688221,
+          "weighted_precision": 0.6621938720829464,
+          "weighted_recall": 0.6607063030844882,
+          "weighted_f1": 0.6589399642191772
+        }
+      },
+      "selected": "tfidf_linearsvm_balanced",
+      "dev_metrics_selected": {
+        "accuracy": 0.6607063030844882,
+        "macro_precision": 0.5232709078527635,
+        "macro_recall": 0.5019208929880913,
+        "macro_f1": 0.5060875911688221,
+        "weighted_precision": 0.6621938720829464,
+        "weighted_recall": 0.6607063030844882,
+        "weighted_f1": 0.6589399642191772,
+        "per_class": {
+          "Affected individuals": {
+            "precision": 0.2923076923076923,
+            "recall": 0.2835820895522388,
+            "f1": 0.2878787878787879,
+            "support": 67
+          },
+          "Infrastructure and utility damage": {
+            "precision": 0.5082872928176796,
+            "recall": 0.5609756097560976,
+            "f1": 0.5333333333333333,
+            "support": 164
+          },
+          "Injured or dead people": {
+            "precision": 0.8026315789473685,
+            "recall": 0.8714285714285714,
+            "f1": 0.8356164383561644,
+            "support": 70
+          },
+          "Missing or found people": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 6
+          },
+          "Not humanitarian": {
+            "precision": 0.7087378640776699,
+            "recall": 0.584,
+            "f1": 0.6403508771929824,
+            "support": 625
+          },
+          "Other relevant information": {
+            "precision": 0.6463547334058759,
+            "recall": 0.7037914691943128,
+            "f1": 0.6738513896766875,
+            "support": 844
+          },
+          "Rescue, volunteering or donation effort": {
+            "precision": 0.7278481012658228,
+            "recall": 0.7615894039735099,
+            "f1": 0.7443365695792881,
+            "support": 453
+          },
+          "Vehicle damage": {
+            "precision": 0.5,
+            "recall": 0.25,
+            "f1": 0.3333333333333333,
+            "support": 8
+          }
+        },
+        "confusion_matrix": {
+          "labels": [
+            "Affected individuals",
+            "Infrastructure and utility damage",
+            "Injured or dead people",
+            "Missing or found people",
+            "Not humanitarian",
+            "Other relevant information",
+            "Rescue, volunteering or donation effort",
+            "Vehicle damage"
+          ],
+          "matrix": [
+            [
+              19,
+              5,
+              1,
+              2,
+              8,
+              18,
+              14,
+              0
+            ],
+            [
+              6,
+              92,
+              1,
+              0,
+              6,
+              55,
+              3,
+              1
+            ],
+            [
+              1,
+              2,
+              61,
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              2,
+              2,
+              0,
+              0
+            ],
+            [
+              8,
+              15,
+              4,
+              1,
+              365,
+              180,
+              52,
+              0
+            ],
+            [
+              23,
+              58,
+              7,
+              0,
+              101,
+              594,
+              60,
+              1
+            ],
+            [
+              8,
+              7,
+              2,
+              0,
+              31,
+              60,
+              345,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              2,
+              4,
+              0,
+              2
+            ]
+          ]
+        }
+      },
+      "calibration": {
+        "method": "temperature_scaling",
+        "fit_on": "dev",
+        "temperature": 0.3,
+        "dev_ece_uncalibrated": 0.37629089486960493,
+        "dev_ece_calibrated": 0.04563706662551327,
+        "dev_brier_uncalibrated": 0.6635267332740262,
+        "dev_brier_calibrated": 0.47597789438405463,
+        "reliability_diagram_dev": [
+          {
+            "bin_lower": 0.2,
+            "bin_upper": 0.26666666666666666,
+            "count": 20,
+            "avg_confidence": 0.24505114322096463,
+            "accuracy": 0.25
+          },
+          {
+            "bin_lower": 0.26666666666666666,
+            "bin_upper": 0.3333333333333333,
+            "count": 83,
+            "avg_confidence": 0.3061777934877492,
+            "accuracy": 0.46987951807228917
+          },
+          {
+            "bin_lower": 0.3333333333333333,
+            "bin_upper": 0.4,
+            "count": 185,
+            "avg_confidence": 0.3689217510781189,
+            "accuracy": 0.35135135135135137
+          },
+          {
+            "bin_lower": 0.4,
+            "bin_upper": 0.4666666666666667,
+            "count": 229,
+            "avg_confidence": 0.43469010065983776,
+            "accuracy": 0.462882096069869
+          },
+          {
+            "bin_lower": 0.4666666666666667,
+            "bin_upper": 0.5333333333333333,
+            "count": 202,
+            "avg_confidence": 0.49991339835021076,
+            "accuracy": 0.5247524752475248
+          },
+          {
+            "bin_lower": 0.5333333333333333,
+            "bin_upper": 0.6,
+            "count": 169,
+            "avg_confidence": 0.5676723120841265,
+            "accuracy": 0.47928994082840237
+          },
+          {
+            "bin_lower": 0.6,
+            "bin_upper": 0.6666666666666666,
+            "count": 208,
+            "avg_confidence": 0.6329612073686607,
+            "accuracy": 0.6923076923076923
+          },
+          {
+            "bin_lower": 0.6666666666666666,
+            "bin_upper": 0.7333333333333333,
+            "count": 185,
+            "avg_confidence": 0.7020593277167135,
+            "accuracy": 0.7189189189189189
+          },
+          {
+            "bin_lower": 0.7333333333333333,
+            "bin_upper": 0.8,
+            "count": 212,
+            "avg_confidence": 0.7687937021071792,
+            "accuracy": 0.7594339622641509
+          },
+          {
+            "bin_lower": 0.8,
+            "bin_upper": 0.8666666666666667,
+            "count": 195,
+            "avg_confidence": 0.8364349424647033,
+            "accuracy": 0.7794871794871795
+          },
+          {
+            "bin_lower": 0.8666666666666667,
+            "bin_upper": 0.9333333333333333,
+            "count": 243,
+            "avg_confidence": 0.9018690508675204,
+            "accuracy": 0.823045267489712
+          },
+          {
+            "bin_lower": 0.9333333333333333,
+            "bin_upper": 1.0,
+            "count": 306,
+            "avg_confidence": 0.9707089587041783,
+            "accuracy": 0.934640522875817
+          }
+        ]
+      }
+    },
+    "damage_severity": {
+      "n_train": 2140,
+      "n_dev": 512,
+      "classes": [
+        "Little or none",
+        "Mild",
+        "Severe"
+      ],
+      "train_distribution": {
+        "Severe": 1382,
+        "Little or none": 277,
+        "Mild": 481
+      },
+      "dev_candidates": {
+        "tfidf_logreg": {
+          "accuracy": 0.623046875,
+          "macro_precision": 0.4154784864765578,
+          "macro_recall": 0.344912575873076,
+          "macro_f1": 0.29800032535700305,
+          "weighted_precision": 0.5046541093384075,
+          "weighted_recall": 0.623046875,
+          "weighted_f1": 0.5087512102589448,
+          "severe_recall": 0.9660493827160493,
+          "severe_precision": 0.6413934426229508,
+          "severe_f1": 0.770935960591133,
+          "severe_underprediction_rate": 0.033950617283950615
+        },
+        "tfidf_logreg_balanced": {
+          "accuracy": 0.5859375,
+          "macro_precision": 0.40089034594228695,
+          "macro_recall": 0.3770499074562729,
+          "macro_f1": 0.37228265955836276,
+          "weighted_precision": 0.5161285766631712,
+          "weighted_recall": 0.5859375,
+          "weighted_f1": 0.5370240551491321,
+          "severe_recall": 0.845679012345679,
+          "severe_precision": 0.6634382566585957,
+          "severe_f1": 0.7435549525101763,
+          "severe_underprediction_rate": 0.15432098765432098
+        },
+        "tfidf_linearsvm": {
+          "accuracy": 0.619140625,
+          "macro_precision": 0.39993169398907097,
+          "macro_recall": 0.3428549627043518,
+          "macro_f1": 0.2961254581944237,
+          "weighted_precision": 0.49740450499487704,
+          "weighted_recall": 0.619140625,
+          "weighted_f1": 0.50557168824949,
+          "severe_recall": 0.9598765432098766,
+          "severe_precision": 0.6372950819672131,
+          "severe_f1": 0.7660098522167488,
+          "severe_underprediction_rate": 0.040123456790123455
+        },
+        "tfidf_linearsvm_balanced": {
+          "accuracy": 0.61328125,
+          "macro_precision": 0.41432928850871953,
+          "macro_recall": 0.3656108712943041,
+          "macro_f1": 0.3451304687405503,
+          "weighted_precision": 0.5189113552441814,
+          "weighted_recall": 0.61328125,
+          "weighted_f1": 0.5311713488194765,
+          "severe_recall": 0.9197530864197531,
+          "severe_precision": 0.6520787746170679,
+          "severe_f1": 0.7631241997439181,
+          "severe_underprediction_rate": 0.08024691358024691
+        }
+      },
+      "selected": "tfidf_logreg_balanced",
+      "dev_metrics_selected": {
+        "accuracy": 0.5859375,
+        "macro_precision": 0.40089034594228695,
+        "macro_recall": 0.3770499074562729,
+        "macro_f1": 0.37228265955836276,
+        "weighted_precision": 0.5161285766631712,
+        "weighted_recall": 0.5859375,
+        "weighted_f1": 0.5370240551491321,
+        "per_class": {
+          "Little or none": {
+            "precision": 0.2972972972972973,
+            "recall": 0.15942028985507245,
+            "f1": 0.20754716981132076,
+            "support": 69
+          },
+          "Mild": {
+            "precision": 0.24193548387096775,
+            "recall": 0.12605042016806722,
+            "f1": 0.16574585635359115,
+            "support": 119
+          },
+          "Severe": {
+            "precision": 0.6634382566585957,
+            "recall": 0.845679012345679,
+            "f1": 0.7435549525101763,
+            "support": 324
+          }
+        },
+        "confusion_matrix": {
+          "labels": [
+            "Little or none",
+            "Mild",
+            "Severe"
+          ],
+          "matrix": [
+            [
+              11,
+              10,
+              48
+            ],
+            [
+              13,
+              15,
+              91
+            ],
+            [
+              13,
+              37,
+              274
+            ]
+          ]
+        },
+        "severe_recall": 0.845679012345679,
+        "severe_precision": 0.6634382566585957,
+        "severe_f1": 0.7435549525101763,
+        "severe_underprediction_rate": 0.15432098765432098
+      },
+      "calibration": {
+        "method": "temperature_scaling",
+        "fit_on": "dev",
+        "temperature": 1.0650000000000002,
+        "dev_ece_uncalibrated": 0.03899605103335927,
+        "dev_ece_calibrated": 0.04566160448083567,
+        "dev_brier_uncalibrated": 0.5284910883065913,
+        "dev_brier_calibrated": 0.5282146693796039,
+        "reliability_diagram_dev": [
+          {
+            "bin_lower": 0.3333333333333333,
+            "bin_upper": 0.4,
+            "count": 17,
+            "avg_confidence": 0.3778781980053882,
+            "accuracy": 0.23529411764705882
+          },
+          {
+            "bin_lower": 0.4,
+            "bin_upper": 0.4666666666666667,
+            "count": 79,
+            "avg_confidence": 0.43561567298039255,
+            "accuracy": 0.4050632911392405
+          },
+          {
+            "bin_lower": 0.4666666666666667,
+            "bin_upper": 0.5333333333333333,
+            "count": 88,
+            "avg_confidence": 0.4986827565062823,
+            "accuracy": 0.48863636363636365
+          },
+          {
+            "bin_lower": 0.5333333333333333,
+            "bin_upper": 0.6,
+            "count": 108,
+            "avg_confidence": 0.56610520710352,
+            "accuracy": 0.5277777777777778
+          },
+          {
+            "bin_lower": 0.6,
+            "bin_upper": 0.6666666666666666,
+            "count": 80,
+            "avg_confidence": 0.6310910999377152,
+            "accuracy": 0.6625
+          },
+          {
+            "bin_lower": 0.6666666666666666,
+            "bin_upper": 0.7333333333333333,
+            "count": 56,
+            "avg_confidence": 0.695827391075103,
+            "accuracy": 0.6607142857142857
+          },
+          {
+            "bin_lower": 0.7333333333333333,
+            "bin_upper": 0.8,
+            "count": 47,
+            "avg_confidence": 0.7628609842632247,
+            "accuracy": 0.8936170212765957
+          },
+          {
+            "bin_lower": 0.8,
+            "bin_upper": 0.8666666666666667,
+            "count": 29,
+            "avg_confidence": 0.8351866150200606,
+            "accuracy": 0.896551724137931
+          },
+          {
+            "bin_lower": 0.8666666666666667,
+            "bin_upper": 0.9333333333333333,
+            "count": 8,
+            "avg_confidence": 0.8891951517096275,
+            "accuracy": 0.75
+          }
+        ]
+      }
+    },
+    "disaster_type": {
+      "n_train": 11579,
+      "n_dev": 2237,
+      "classes": [
+        "Earthquake",
+        "Flood",
+        "Tropical cyclone",
+        "Wildfire"
+      ],
+      "train_distribution": {
+        "Wildfire": 1036,
+        "Flood": 613,
+        "Earthquake": 1253,
+        "Tropical cyclone": 8677
+      },
+      "dev_candidates": {
+        "tfidf_logreg": {
+          "accuracy": 0.9754135002235136,
+          "macro_precision": 0.9811621860429649,
+          "macro_recall": 0.9311616408641198,
+          "macro_f1": 0.9548325217646698,
+          "weighted_precision": 0.9755840652574683,
+          "weighted_recall": 0.9754135002235136,
+          "weighted_f1": 0.9750795342962342
+        },
+        "tfidf_logreg_balanced": {
+          "accuracy": 0.9785426911041574,
+          "macro_precision": 0.9600747879990245,
+          "macro_recall": 0.9590651450049474,
+          "macro_f1": 0.9595637841005343,
+          "weighted_precision": 0.9785415248953605,
+          "weighted_recall": 0.9785426911041574,
+          "weighted_f1": 0.978540654732257
+        },
+        "tfidf_linearsvm": {
+          "accuracy": 0.9767545820295038,
+          "macro_precision": 0.9797425461993196,
+          "macro_recall": 0.937523592454467,
+          "macro_f1": 0.9576147717537495,
+          "weighted_precision": 0.9768236798726213,
+          "weighted_recall": 0.9767545820295038,
+          "weighted_f1": 0.976491581271472
+        },
+        "tfidf_linearsvm_balanced": {
+          "accuracy": 0.9785426911041574,
+          "macro_precision": 0.9669133189246555,
+          "macro_recall": 0.9550475657652566,
+          "macro_f1": 0.9608856115297737,
+          "weighted_precision": 0.9784442930171995,
+          "weighted_recall": 0.9785426911041574,
+          "weighted_f1": 0.9784684785100459
+        }
+      },
+      "selected": "tfidf_linearsvm_balanced",
+      "dev_metrics_selected": {
+        "accuracy": 0.9785426911041574,
+        "macro_precision": 0.9669133189246555,
+        "macro_recall": 0.9550475657652566,
+        "macro_f1": 0.9608856115297737,
+        "weighted_precision": 0.9784442930171995,
+        "weighted_recall": 0.9785426911041574,
+        "weighted_f1": 0.9784684785100459,
+        "per_class": {
+          "Earthquake": {
+            "precision": 0.9798387096774194,
+            "recall": 0.9759036144578314,
+            "f1": 0.9778672032193159,
+            "support": 249
+          },
+          "Flood": {
+            "precision": 0.9528301886792453,
+            "recall": 0.9181818181818182,
+            "f1": 0.9351851851851852,
+            "support": 110
+          },
+          "Tropical cyclone": {
+            "precision": 0.9832935560859188,
+            "recall": 0.988009592326139,
+            "f1": 0.9856459330143541,
+            "support": 1668
+          },
+          "Wildfire": {
+            "precision": 0.9516908212560387,
+            "recall": 0.9380952380952381,
+            "f1": 0.9448441247002398,
+            "support": 210
+          }
+        },
+        "confusion_matrix": {
+          "labels": [
+            "Earthquake",
+            "Flood",
+            "Tropical cyclone",
+            "Wildfire"
+          ],
+          "matrix": [
+            [
+              243,
+              0,
+              6,
+              0
+            ],
+            [
+              0,
+              101,
+              9,
+              0
+            ],
+            [
+              5,
+              5,
+              1648,
+              10
+            ],
+            [
+              0,
+              0,
+              13,
+              197
+            ]
+          ]
+        }
+      },
+      "calibration": {
+        "method": "temperature_scaling",
+        "fit_on": "dev",
+        "temperature": 0.26222222222222225,
+        "dev_ece_uncalibrated": 0.32957817430458547,
+        "dev_ece_calibrated": 0.004931866971396534,
+        "dev_brier_uncalibrated": 0.19041159743293423,
+        "dev_brier_calibrated": 0.035587567213758955,
+        "reliability_diagram_dev": [
+          {
+            "bin_lower": 0.4,
+            "bin_upper": 0.4666666666666667,
+            "count": 1,
+            "avg_confidence": 0.4274961267973757,
+            "accuracy": 0.0
+          },
+          {
+            "bin_lower": 0.4666666666666667,
+            "bin_upper": 0.5333333333333333,
+            "count": 4,
+            "avg_confidence": 0.5025090641713058,
+            "accuracy": 0.75
+          },
+          {
+            "bin_lower": 0.5333333333333333,
+            "bin_upper": 0.6,
+            "count": 10,
+            "avg_confidence": 0.5741886909718033,
+            "accuracy": 0.6
+          },
+          {
+            "bin_lower": 0.6,
+            "bin_upper": 0.6666666666666666,
+            "count": 8,
+            "avg_confidence": 0.6382465273319717,
+            "accuracy": 0.25
+          },
+          {
+            "bin_lower": 0.6666666666666666,
+            "bin_upper": 0.7333333333333333,
+            "count": 12,
+            "avg_confidence": 0.7035368107342478,
+            "accuracy": 0.75
+          },
+          {
+            "bin_lower": 0.7333333333333333,
+            "bin_upper": 0.8,
+            "count": 8,
+            "avg_confidence": 0.7581338739409271,
+            "accuracy": 0.875
+          },
+          {
+            "bin_lower": 0.8,
+            "bin_upper": 0.8666666666666667,
+            "count": 27,
+            "avg_confidence": 0.8380079520824202,
+            "accuracy": 0.7037037037037037
+          },
+          {
+            "bin_lower": 0.8666666666666667,
+            "bin_upper": 0.9333333333333333,
+            "count": 62,
+            "avg_confidence": 0.9076073867941707,
+            "accuracy": 0.9193548387096774
+          },
+          {
+            "bin_lower": 0.9333333333333333,
+            "bin_upper": 1.0,
+            "count": 2105,
+            "avg_confidence": 0.9911657944091762,
+            "accuracy": 0.9909738717339668
+          }
+        ]
+      }
+    }
+  }
+}

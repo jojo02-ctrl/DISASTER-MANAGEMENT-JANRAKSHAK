@@ -1,0 +1,1 @@
+{"type":"Flood","urgency":"HIGH","rawText":"Flood water is rising fast in our street and houses are getting submerged","lat":22.5726,"lng":88.3639,"accuracyM":11,"language":"en","source":"triage","aiDetection":{"label":"fire","confidence":0.86,"model":"yolov8n-tflite"}}

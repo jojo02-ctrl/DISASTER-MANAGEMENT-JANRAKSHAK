@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #050505;
+  --panel: #0b0b0c;
+  --line: #1c1c1f;
+  --muted: #6b6b70;
+  --fg: #e8e8ea;
+  --accent: #ff5a1f;
+  --ok: #34d399;
+  --warn: #fbbf24;
+}
+html { color-scheme: dark; }
+body { background: var(--bg); color: var(--fg); font-family: ui-sans-serif, system-ui, -apple-system, "Inter", sans-serif; }
+.mono { font-family: ui-monospace, "JetBrains Mono", Menlo, monospace; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; }
+.grid-bg { background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 32px 32px; }
+.label { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+.k { color: var(--muted); }
+::-webkit-scrollbar { width: 8px; height: 8px; } ::-webkit-scrollbar-thumb { background: #222; border-radius: 8px; }
+.pill { border: 1px solid var(--line); border-radius: 999px; padding: 2px 8px; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+.pill-ok { border-color: rgba(52,211,153,.4); color: var(--ok); }
+.pill-warn { border-color: rgba(251,191,36,.4); color: var(--warn); }
+.pill-bad { border-color: rgba(255,90,31,.5); color: var(--accent); }
+.pill-dim { color: var(--muted); }
+textarea, input[type=text], select { outline: none; }

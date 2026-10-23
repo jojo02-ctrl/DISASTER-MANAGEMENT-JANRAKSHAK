@@ -1,0 +1,798 @@
+{
+  "model_version": "dintel-core-v1.0.0",
+  "categories": {
+    "informative/high_confidence_wrong": [
+      {
+        "id": "923324822360174593",
+        "text": "Bilingual Panel To Discuss Help For Hurricane Maria Evacuees https://t.co/dEN09xghyF https://t.co/05fHcG5QLV",
+        "true": "not_informative",
+        "pred": "informative",
+        "confidence": 0.9841443415783077,
+        "event": "hurricane_maria"
+      },
+      {
+        "id": "930132844516708355",
+        "text": "☮️ #Humanity and ❤️ to everyone in #Iran &amp; #Iraq Ὁ5 #earthquake #rescue #help #aid https://t.co/nO8HfS2kKU",
+        "true": "not_informative",
+        "pred": "informative",
+        "confidence": 0.9764509902430634,
+        "event": "iraq_iran_earthquake"
+      },
+      {
+        "id": "913856267969540099",
+        "text": "Lloyd’s braces for hurricane profit damage after Harvey, Irma and Maria https://t.co/IuZklzQvFn https://t.co/QiRwfFpkhW",
+        "true": "not_informative",
+        "pred": "informative",
+        "confidence": 0.9762804260632634,
+        "event": "mexico_earthquake"
+      },
+      {
+        "id": "908126625065299969",
+        "text": "E. Coli As High As 135 Times The Safe Limit Discovered In Houston Homes As Residents Return… https://t.co/7Me2gF7ryp https://t.co/JznxigEdqa",
+        "true": "not_informative",
+        "pred": "informative",
+        "confidence": 0.9657848005857994,
+        "event": "hurricane_harvey"
+      },
+      {
+        "id": "909900048074526720",
+        "text": "Following Hurricane Irma, the Jaguars could have moved their game from Jacksonville as the city recovered. ... &gt; &lt;‚Ä¶ https://t.co/zUsrhy34ax",
+        "true": "not_informative",
+        "pred": "informative",
+        "confidence": 0.9655079627160227,
+        "event": "hurricane_irma"
+      },
+      {
+        "id": "904623462077140993",
+        "text": "#Texas #Edges #Closer to #Recovery after #Harvey as #Key #Pipe... - https://t.co/9tOltjfbbK - #News https://t.co/mmAe2SORTz",
+        "true": "not_informative",
+        "pred": "informative",
+        "confidence": 0.9647635126921394,
+        "event": "hurricane_harvey"
+      },
+      {
+        "id": "908493698903789568",
+        "text": "Sunrise on way to work #jnj @donateaphoto #HurricaneHarvey https://t.co/pwdzpJ6q6w https://t.co/MAXLKyAGo8",
+        "true": "informative",
+        "pred": "not_informative",
+        "confidence": 0.9614486528974834,
+        "event": "hurricane_harvey"
+      },
+      {
+        "id": "905724029276958720",
+        "text": "#BiotestPicnic Thirsty Thursday, here in Florida no bottled water left, Hurricane Irma! @BPCMelbourne We're open! https://t.co/q8NVuAAxLd",
+        "true": "not_informative",
+        "pred": "informative",
+        "confidence": 0.960342430114245,
+        "event": "hurricane_irma"
+      }
+    ],
+    "informative/low_confidence": [
+      {
+        "id": "909900225816428544",
+        "text": "Irma update from Highlands County. Next on @WFLA. https://t.co/A7VZaGRQwk",
+        "true": "informative",
+        "pred": "not_informative",
+        "confidence": 0.5006121890664691,
+        "event": "hurricane_irma"
+      },
+      {
+        "id": "905424197471666179",
+        "text": "Harvey Roy Upson â€“ Big Bouquet of Roses (Original Canadian CountryÂ Songs) https://t.co/0qoFnz8pIB https://t.co/nrAt7zNXx6",
+        "true": "not_informative",
+        "pred": "not_informative",
+        "confidence": 0.5009565902040819,
+        "event": "hurricane_harvey"
+      },
+      {
+        "id": "909386581080969216",
+        "text": "Fred survived! #Irma https://t.co/kywQ9YUAh2",
+        "true": "informative",
+        "pred": "informative",
+        "confidence": 0.5016061501197961,
+        "event": "hurricane_irma"
+      },
+      {
+        "id": "910053733056286721",
+        "text": "In the wake of hurricane Irma, this is my foster squirrel. His name is Miguel and he‚Äôs growing up so fast! ·Ω¢9 https://t.co/K5ebrgVNXA",
+        "true": "informative",
+        "pred": "not_informative",
+        "confidence": 0.5018114787485534,
+        "event": "hurricane_irma"
+      },
+      {
+        "id": "911729580729356289",
+        "text": "18z GEFS quite a bit further west, looks to be pretty weak and in the Parking/Albemarle sound. #HurricaneMaria https://t.co/eswhNloCFS",
+        "true": "not_informative",
+        "pred": "not_informative",
+        "confidence": 0.5020084064817413,
+        "event": "hurricane_maria"
+      },
+      {
+        "id": "911905889904234497",
+        "text": "Third earthquake in Mexico this month results in 5 dead - #Australia First published on: DailyMail https://t.co/r4rt1oVLa3",
+        "true": "informative",
+        "pred": "informative",
+        "confidence": 0.5021754229168566,
+        "event": "mexico_earthquake"
+      },
+      {
+        "id": "927657615332651008",
+        "text": "Working w/ @NOAA, #DoD was able to provide WX radar coverage for #PR. Check out more here--&gt; https://t.co/XYyw74Mj3z https://t.co/H9uj7HeRMQ",
+        "true": "not_informative",
+        "pred": "informative",
+        "confidence": 0.502221824758395,
+        "event": "hurricane_maria"
+      },
+      {
+        "id": "912379162857496576",
+        "text": "Hurricane #Maria is losing strength. Eyewall exposed, dry air taking over. Should be downgraded to TS soon. https://t.co/chq2eHnTHm",
+        "true": "informative",
+        "pred": "not_informative",
+        "confidence": 0.50272640402085,
+        "event": "hurricane_maria"
+      }
+    ],
+    "informative/error_rate_by_event": {
+      "srilanka_floods": {
+        "n": 107,
+        "error_rate": 0.056074766355140186
+      },
+      "hurricane_harvey": {
+        "n": 568,
+        "error_rate": 0.17077464788732394
+      },
+      "hurricane_maria": {
+        "n": 542,
+        "error_rate": 0.24538745387453875
+      },
+      "iraq_iran_earthquake": {
+        "n": 73,
+        "error_rate": 0.1917808219178082
+      },
+      "hurricane_irma": {
+        "n": 548,
+        "error_rate": 0.2208029197080292
+      },
+      "california_wildfires": {
+        "n": 240,
+        "error_rate": 0.14583333333333334
+      },
+      "mexico_earthquake": {
+        "n": 159,
+        "error_rate": 0.22641509433962265
+      }
+    },
+    "humanitarian_category/high_confidence_wrong": [
+      {
+        "id": "919638588706263040",
+        "text": "Mike Grabow, 40, identified as among those killed in Tubbs Fire. https://t.co/130yRnI9Bb https://t.co/DoY44RKwDK",
+        "true": "Affected individuals",
+        "pred": "Injured or dead people",
+        "confidence": 0.9909434533003586,
+        "event": "california_wildfires"
+      },
+      {
+        "id": "917805148600012800",
+        "text": "RT @CurbedSF: How to help victims of the Northern California wildfire. https://t.co/A9JNNifssX https://t.co/RSr0s2ylaF",
+        "true": "Other relevant information",
+        "pred": "Rescue, volunteering or donation effort",
+        "confidence": 0.9831210292480151,
+        "event": "california_wildfires"
+      },
+      {
+        "id": "917827226372132864",
+        "text": "GoFundMe: How to Immediately Help Those Impacted by the California Wildfires #webdesign… https://t.co/zfxatzvQWY https://t.co/Dlp5iL7rww",
+        "true": "Not humanitarian",
+        "pred": "Rescue, volunteering or donation effort",
+        "confidence": 0.9826504456886674,
+        "event": "california_wildfires"
+      },
+      {
+        "id": "913196037019488262",
+        "text": "cute totes! proceeds to united way's mexico earthquake relief fund! https://t.co/gJbIVYgmHX https://t.co/7pSscFyBpu",
+        "true": "Not humanitarian",
+        "pred": "Rescue, volunteering or donation effort",
+        "confidence": 0.9806268080615911,
+        "event": "mexico_earthquake"
+      },
+      {
+        "id": "910655620566548480",
+        "text": "I think your retweets can help #MexicoEarthquake victims find the aid they need! https://t.co/6vF83o0WYE https://t.co/dmQUNmdRzq",
+        "true": "Other relevant information",
+        "pred": "Rescue, volunteering or donation effort",
+        "confidence": 0.9790875525111095,
+        "event": "mexico_earthquake"
+      },
+      {
+        "id": "909417096026759168",
+        "text": "RT @FIU: Please note that FIU is not a drop-off site for donations. How to help: https://t.co/CmfgAUwwI4 #Irma https://t.co/QMxPiRikVh",
+        "true": "Not humanitarian",
+        "pred": "Rescue, volunteering or donation effort",
+        "confidence": 0.9786744010559976,
+        "event": "hurricane_irma"
+      },
+      {
+        "id": "914102910195290112",
+        "text": "Make Puerto Rico Great Again.. #HurricaneMaria #BeAGoodHuman #Compassion https://t.co/0OoYlkyutB",
+        "true": "Other relevant information",
+        "pred": "Not humanitarian",
+        "confidence": 0.976111225407547,
+        "event": "hurricane_maria"
+      },
+      {
+        "id": "930864228411457536",
+        "text": "U.S. sanctions are impeding relief efforts for Iran-Iraq earthquake victims https://t.co/L7cHwGff6U https://t.co/asqRko7RL9",
+        "true": "Not humanitarian",
+        "pred": "Rescue, volunteering or donation effort",
+        "confidence": 0.9731846169167208,
+        "event": "iraq_iran_earthquake"
+      }
+    ],
+    "humanitarian_category/low_confidence": [
+      {
+        "id": "905951373782654976",
+        "text": "Woman Is Reunited With Photo Album Lost In Hurricane Harveyâ€™s Floods, Thanks to SocialÂ Media https://t.co/9B51yQqIVP https://t.co/wPHZuNoWSl",
+        "true": "Rescue, volunteering or donation effort",
+        "pred": "Affected individuals",
+        "confidence": 0.20416036156726533,
+        "event": "hurricane_harvey"
+      },
+      {
+        "id": "910669916461613056",
+        "text": "Survivors of Mexico City's earthquake land in Las Vegas with stories of horror and heroics https://t.co/15labc7Qao https://t.co/cbcPxipksa",
+        "true": "Other relevant information",
+        "pred": "Rescue, volunteering or donation effort",
+        "confidence": 0.23479803191237827,
+        "event": "mexico_earthquake"
+      },
+      {
+        "id": "914169485493403649",
+        "text": "â€œMommy, donâ€™t cry,â€ a 4-year-old girl surviving Hurricane Maria - UNICEF Connect https://t.co/tErspguhbj https://t.co/ZcsJ5S9wKo",
+        "true": "Rescue, volunteering or donation effort",
+        "pred": "Affected individuals",
+        "confidence": 0.24284302226546703,
+        "event": "hurricane_maria"
+      },
+      {
+        "id": "914140629617307648",
+        "text": "Meet Carmen Yulín Cruz, the woman taking on Donald Trump after Hurricane Maria https://t.co/p11o4rxXv4 https://t.co/y0NH8IRxbg — Newswee…",
+        "true": "Not humanitarian",
+        "pred": "Other relevant information",
+        "confidence": 0.2507312152793896,
+        "event": "hurricane_maria"
+      },
+      {
+        "id": "905036991644958720",
+        "text": "AZ-TF1 has been demobilized from Harvey. We're heading home. https://t.co/h8e1iRAtw7",
+        "true": "Not humanitarian",
+        "pred": "Other relevant information",
+        "confidence": 0.25317345221419413,
+        "event": "hurricane_harvey"
+      },
+      {
+        "id": "909748862629359616",
+        "text": "How many are still without power after #Irma? Depends on where you look. https://t.co/8G1Fi22dCo https://t.co/ehaT4Ciu0R",
+        "true": "Other relevant information",
+        "pred": "Infrastructure and utility damage",
+        "confidence": 0.25619807866661143,
+        "event": "hurricane_irma"
+      },
+      {
+        "id": "912989234922889216",
+        "text": "Collapsed School in Mexico Earthquake Is Checked for ‘Hidden Defects’ https://t.co/goL1wrDMXN https://t.co/viKfCpLtf7",
+        "true": "Infrastructure and utility damage",
+        "pred": "Not humanitarian",
+        "confidence": 0.25794606781654217,
+        "event": "mexico_earthquake"
+      },
+      {
+        "id": "910125116775903232",
+        "text": "Do you have boat damage due to Hurricane Irma? We can assist you with filing a claim with your insurance company.… https://t.co/HemyHE4WX6",
+        "true": "Infrastructure and utility damage",
+        "pred": "Infrastructure and utility damage",
+        "confidence": 0.2629236224835376,
+        "event": "hurricane_irma"
+      }
+    ],
+    "humanitarian_category/error_rate_by_event": {
+      "hurricane_harvey": {
+        "n": 572,
+        "error_rate": 0.3618881118881119
+      },
+      "mexico_earthquake": {
+        "n": 176,
+        "error_rate": 0.4318181818181818
+      },
+      "hurricane_maria": {
+        "n": 518,
+        "error_rate": 0.33783783783783783
+      },
+      "hurricane_irma": {
+        "n": 559,
+        "error_rate": 0.36493738819320215
+      },
+      "california_wildfires": {
+        "n": 216,
+        "error_rate": 0.4027777777777778
+      },
+      "srilanka_floods": {
+        "n": 123,
+        "error_rate": 0.14634146341463414
+      },
+      "iraq_iran_earthquake": {
+        "n": 73,
+        "error_rate": 0.4520547945205479
+      }
+    },
+    "damage_severity/high_confidence_wrong": [
+      {
+        "id": "930389337895776256",
+        "text": "In pictures: Deadly earthquake jolts Iran, Iraq-https://t.co/D05zqoEyAA https://t.co/FhUnOzM8Hg",
+        "true": "Mild",
+        "pred": "Severe",
+        "confidence": 0.8871601138951254,
+        "event": "iraq_iran_earthquake"
+      },
+      {
+        "id": "930819767874793473",
+        "text": "Survivors of earthquake in Iran await badly needed aid, 3 days later https://t.co/j0ZoPPxE8b https://t.co/ke38gWqE6c",
+        "true": "Mild",
+        "pred": "Severe",
+        "confidence": 0.8640245930852476,
+        "event": "iraq_iran_earthquake"
+      },
+      {
+        "id": "917815040962695168",
+        "text": "RT @TheAtlantic: Photos of California's destructive wildfires, via @TheAtlPhoto: https://t.co/mzYsQALqrl https://t.co/bWvczIJa2Z",
+        "true": "Mild",
+        "pred": "Severe",
+        "confidence": 0.8409859385064282,
+        "event": "california_wildfires"
+      },
+      {
+        "id": "920013231862833152",
+        "text": "GRAPHIC: Harrowing video of California wildfire escape is terrifying https://t.co/Z9KTL8ovEU https://t.co/eHjP9fb9tY",
+        "true": "Mild",
+        "pred": "Severe",
+        "confidence": 0.8312150297030059,
+        "event": "california_wildfires"
+      },
+      {
+        "id": "921452372861313025",
+        "text": "Property lost to California wildfires exceeds $1B https://t.co/il2ZG8uEGS",
+        "true": "Mild",
+        "pred": "Severe",
+        "confidence": 0.8234563226479807,
+        "event": "california_wildfires"
+      },
+      {
+        "id": "908497182105460738",
+        "text": "Homeowner cleaning up tornado debris in Palm Bay --&gt; https://t.co/Z7meDWYIzV https://t.co/GrbppOWFWn",
+        "true": "Mild",
+        "pred": "Little or none",
+        "confidence": 0.823179952807785,
+        "event": "hurricane_harvey"
+      },
+      {
+        "id": "922474905538564096",
+        "text": "https://t.co/AmyOSNo6kh A San Isidro, Puerto Rico resident stands on her property. MARIO TAMA/GETTY IMAGES https://t.co/fenCvYKU6q",
+        "true": "Little or none",
+        "pred": "Severe",
+        "confidence": 0.8142968405109555,
+        "event": "hurricane_maria"
+      },
+      {
+        "id": "909423799711318018",
+        "text": "RT @camxparks: Update on hurricane Irma damage in my home town of Cudjoe Key, FL https://t.co/aV2Dm42OCr https://t.co/JbvggvJTeE",
+        "true": "Severe",
+        "pred": "Little or none",
+        "confidence": 0.8058172230649903,
+        "event": "hurricane_irma"
+      }
+    ],
+    "damage_severity/low_confidence": [
+      {
+        "id": "910177644444110848",
+        "text": "Thankfully this is all Irma did to our Florida home https://t.co/Cy30s0iyb7",
+        "true": "Little or none",
+        "pred": "Little or none",
+        "confidence": 0.3488524048074183,
+        "event": "hurricane_irma"
+      },
+      {
+        "id": "910124932775989248",
+        "text": "Need a new roof? State agencies suspend certain rules to hasten post-Irma recovery https://t.co/i2rEU9Ebik",
+        "true": "Mild",
+        "pred": "Severe",
+        "confidence": 0.35471014117960376,
+        "event": "hurricane_irma"
+      },
+      {
+        "id": "909839700231208960",
+        "text": "Things to know if you own property in Beaufort County and have tree damage from Tropical Storm Irma‚Ä¶ https://t.co/N7GHLpNOzA",
+        "true": "Severe",
+        "pred": "Little or none",
+        "confidence": 0.36711772242417967,
+        "event": "hurricane_irma"
+      },
+      {
+        "id": "904802599219625985",
+        "text": "RT @SunSentinel: South Florida businesses launch Hurricane Harvey relief efforts https://t.co/PZ1njXO6uh https://t.co/CBryGSKMCo",
+        "true": "Severe",
+        "pred": "Severe",
+        "confidence": 0.368466021053988,
+        "event": "hurricane_harvey"
+      },
+      {
+        "id": "910080834153123841",
+        "text": "This is just rude, lawd forgive me for laughing. #irma #Irma2017 #HurricaneIrma #meme #poolparty #september ὢD https://t.co/DKMtzKCKZQ",
+        "true": "Severe",
+        "pred": "Little or none",
+        "confidence": 0.37050163234146144,
+        "event": "hurricane_irma"
+      },
+      {
+        "id": "909856334165581824",
+        "text": "CLIVE SMITH: No sympathy for those tax exiles hit by Hurricane Irma:‚Ä¶ https://t.co/aCc4qg11rF #Columnists‚Ä¶ https://t.co/Kve1kx5OAc",
+        "true": "Mild",
+        "pred": "Mild",
+        "confidence": 0.3710071290041001,
+        "event": "hurricane_irma"
+      },
+      {
+        "id": "911588822768586753",
+        "text": "Aftermath of a #hurricane #maria #VirginIslands. Don't give up my #CaribbeanStrong people https://t.co/UO16x6RCbu",
+        "true": "Mild",
+        "pred": "Severe",
+        "confidence": 0.372172813179258,
+        "event": "hurricane_maria"
+      },
+      {
+        "id": "909892286783221761",
+        "text": "Hiscox outlines #Hurricane #Harvey estimate https://t.co/V57ZyNEUhv #InsuranceNews @HiscoxUK https://t.co/h1JHoP6EW0",
+        "true": "Severe",
+        "pred": "Little or none",
+        "confidence": 0.3721880507665189,
+        "event": "hurricane_harvey"
+      }
+    ],
+    "damage_severity/severe_underprediction": [
+      {
+        "id": "909839595222831111",
+        "text": "Economic cost of Harvey, Irma to be $290 billion https://t.co/iGwY6DQIEY #weather #hurricane https://t.co/CSlxIoGvNj",
+        "true": "Severe",
+        "pred": "Mild",
+        "confidence": 0.5341241465461699,
+        "event": "hurricane_irma"
+      },
+      {
+        "id": "909885632582787072",
+        "text": "#HurrianeMaria slamming #Leewards, #VirginIslands next! Tragedy beyond belief! DONATE NOW TO HELP!‚Ä¶ https://t.co/RlxOL3Kffr",
+        "true": "Severe",
+        "pred": "Mild",
+        "confidence": 0.4200517802938063,
+        "event": "hurricane_irma"
+      },
+      {
+        "id": "913558949965783040",
+        "text": "Eight days after Hurricane Maria, the wait for food and supplies is agonizing: https://t.co/4ajxcNdCI7 https://t.co/SkpOzQj73e",
+        "true": "Severe",
+        "pred": "Mild",
+        "confidence": 0.48055481655398186,
+        "event": "hurricane_maria"
+      },
+      {
+        "id": "914163198177300480",
+        "text": "RT @ceripadley: Friend sent me this picture of a building on her street. #mexicoearthquake https://t.co/8N3ujh5xBp",
+        "true": "Severe",
+        "pred": "Mild",
+        "confidence": 0.5237267531264085,
+        "event": "mexico_earthquake"
+      },
+      {
+        "id": "905960553830522880",
+        "text": "Hurricane Harvey First Responder Gets Flesh-Eating Bacteria From Texas Storm Water https://t.co/Rjpe9IgBxZ https://t.co/G6da88c9xp",
+        "true": "Severe",
+        "pred": "Little or none",
+        "confidence": 0.4249071670700305,
+        "event": "hurricane_harvey"
+      },
+      {
+        "id": "916291860162859009",
+        "text": "First Shift: Can Tesla cure Puerto Rico's power woes? https://t.co/apoC3zzxwy https://t.co/50YjQonPIM",
+        "true": "Severe",
+        "pred": "Mild",
+        "confidence": 0.49692894219339023,
+        "event": "hurricane_maria"
+      },
+      {
+        "id": "905200250796687360",
+        "text": "Tomorrow is a BIG Day! Please join us to raise some $$$ for all the Harvey victims!!! https://t.co/xOEFnICDep",
+        "true": "Severe",
+        "pred": "Little or none",
+        "confidence": 0.4695941055624326,
+        "event": "hurricane_harvey"
+      },
+      {
+        "id": "907992015299690496",
+        "text": "1/Relocate young kids before pre-disaster prep/hysteria. Period. House/feed/clothe - clean/safe. https://t.co/m3waS4Ovyq #Harvey #Irma #FEMA",
+        "true": "Severe",
+        "pred": "Mild",
+        "confidence": 0.40848289117128367,
+        "event": "hurricane_harvey"
+      },
+      {
+        "id": "910080834153123841",
+        "text": "This is just rude, lawd forgive me for laughing. #irma #Irma2017 #HurricaneIrma #meme #poolparty #september ὢD https://t.co/DKMtzKCKZQ",
+        "true": "Severe",
+        "pred": "Little or none",
+        "confidence": 0.37050163234146144,
+        "event": "hurricane_irma"
+      },
+      {
+        "id": "904464310436478976",
+        "text": "Aransas County's faith not rocked by Hurricane Harvey's wrath https://t.co/mC9X8JKRox https://t.co/GopwMhaw04",
+        "true": "Severe",
+        "pred": "Mild",
+        "confidence": 0.5074936071235555,
+        "event": "hurricane_harvey"
+      }
+    ],
+    "damage_severity/error_rate_by_event": {
+      "hurricane_maria": {
+        "n": 132,
+        "error_rate": 0.44696969696969696
+      },
+      "hurricane_irma": {
+        "n": 119,
+        "error_rate": 0.6218487394957983
+      },
+      "california_wildfires": {
+        "n": 87,
+        "error_rate": 0.10344827586206896
+      },
+      "hurricane_harvey": {
+        "n": 127,
+        "error_rate": 0.5196850393700787
+      },
+      "mexico_earthquake": {
+        "n": 21,
+        "error_rate": 0.23809523809523808
+      },
+      "srilanka_floods": {
+        "n": 11,
+        "error_rate": 0.2727272727272727
+      },
+      "iraq_iran_earthquake": {
+        "n": 23,
+        "error_rate": 0.17391304347826086
+      }
+    },
+    "disaster_type/high_confidence_wrong": [
+      {
+        "id": "913856267969540099",
+        "text": "Lloyd’s braces for hurricane profit damage after Harvey, Irma and Maria https://t.co/IuZklzQvFn https://t.co/QiRwfFpkhW",
+        "true": "Earthquake",
+        "pred": "Tropical cyclone",
+        "confidence": 0.9998984243172298,
+        "event": "mexico_earthquake"
+      },
+      {
+        "id": "907307110307962885",
+        "text": "Mexico withdrew its offer of #Harvey aid to Texas after last week's powerful earthquake https://t.co/Zh53POu2zf https://t.co/mK1iSC0EM5",
+        "true": "Tropical cyclone",
+        "pred": "Earthquake",
+        "confidence": 0.999893280249798,
+        "event": "hurricane_harvey"
+      },
+      {
+        "id": "928883955285106688",
+        "text": "USGS:M 3.0 - 38km WNW of Rincon, Puerto Rico https://t.co/L2mn4Ez1zf #earthquake https://t.co/ki4e1a5dZm",
+        "true": "Tropical cyclone",
+        "pred": "Earthquake",
+        "confidence": 0.9998917201107171,
+        "event": "hurricane_maria"
+      },
+      {
+        "id": "910587509964464128",
+        "text": "Delta flights disrupted by Hurricane Maria, Mexico earthquake https://t.co/B5jRnYZBG8 https://t.co/16wo0IVG9j",
+        "true": "Tropical cyclone",
+        "pred": "Earthquake",
+        "confidence": 0.9997001711220206,
+        "event": "hurricane_maria"
+      },
+      {
+        "id": "914188148623671296",
+        "text": ".@CharityNav's lists of organizations responding to #HurricaneMaria &amp; #MexicoEarthquake ➤ https://t.co/lua4zADfAy https://t.co/4hTlJXkvKP",
+        "true": "Tropical cyclone",
+        "pred": "Earthquake",
+        "confidence": 0.9996568246659061,
+        "event": "hurricane_maria"
+      },
+      {
+        "id": "907420156334239749",
+        "text": "Mexico Rescinds Its Hurricane Harvey Aid Offer Following Last Week’s 8+ Magnitude Earthquake https://t.co/qfuudqR6gt https://t.co/Fbxy58ELcE",
+        "true": "Tropical cyclone",
+        "pred": "Earthquake",
+        "confidence": 0.9994053651856691,
+        "event": "hurricane_harvey"
+      },
+      {
+        "id": "910643486214340608",
+        "text": "Sen. Menendez talks Equifax hack, Hurricane Maria, earthquake in Mexico (@RavenSantana) - https://t.co/00m3npN84T https://t.co/VJ9bMnuDPW",
+        "true": "Tropical cyclone",
+        "pred": "Earthquake",
+        "confidence": 0.9987308172682167,
+        "event": "hurricane_maria"
+      },
+      {
+        "id": "910212600734117888",
+        "text": "Weird.... during #Irma an #earthquake hit Mexico and now during #Maria it happens again? Coincedense? Does this mak‚Ä¶ https://t.co/N7sN3Ok9au",
+        "true": "Tropical cyclone",
+        "pred": "Earthquake",
+        "confidence": 0.982933080223366,
+        "event": "hurricane_irma"
+      }
+    ],
+    "disaster_type/low_confidence": [
+      {
+        "id": "930804684155219968",
+        "text": "Photo-op rejected, hasbarah talking point reinforced https://t.co/xVaELxNJLa https://t.co/7xc4cy67JO",
+        "true": "Earthquake",
+        "pred": "Tropical cyclone",
+        "confidence": 0.4852705648888826,
+        "event": "iraq_iran_earthquake"
+      },
+      {
+        "id": "904692578968371200",
+        "text": "Harvey Flood Victims Don't Even Know What's in the Chemical Plumes They Are Inhaling - Federal Emergency Manage... https://t.co/uinu1LLT4M",
+        "true": "Tropical cyclone",
+        "pred": "Flood",
+        "confidence": 0.521530428918068,
+        "event": "hurricane_harvey"
+      },
+      {
+        "id": "901663823186337792",
+        "text": "#HurricaneHarvey unleashes floods and fear on America’s Gulf Coast: https://t.co/WUQTfLRiOr https://t.co/ykPZDLOi6O",
+        "true": "Tropical cyclone",
+        "pred": "Flood",
+        "confidence": 0.5306364390805012,
+        "event": "hurricane_harvey"
+      },
+      {
+        "id": "871251322279911429",
+        "text": "ὤC YASSS It's time for #liveme's show Magaña ἳ9ᾔ0ἳ9MoraὈB : https://t.co/bt6m0QCuDv https://t.co/DycvH58B2d",
+        "true": "Flood",
+        "pred": "Flood",
+        "confidence": 0.5622090037919701,
+        "event": "srilanka_floods"
+      },
+      {
+        "id": "904894089350565888",
+        "text": "RT @abc13houston: Tips on how you can help flood victims cope after #Harvey: https://t.co/xJd5ibQa0P https://t.co/Z1iDiYNv10",
+        "true": "Tropical cyclone",
+        "pred": "Flood",
+        "confidence": 0.5864049273408379,
+        "event": "hurricane_harvey"
+      },
+      {
+        "id": "872076035726204929",
+        "text": "Heavy flooding, landslides have affected some 684,000 people in south &amp; central #SriLanka https://t.co/3VqgVznVEv https://t.co/F5uPmn0Ws1",
+        "true": "Flood",
+        "pred": "Tropical cyclone",
+        "confidence": 0.5916636565354719,
+        "event": "srilanka_floods"
+      },
+      {
+        "id": "905350506205339648",
+        "text": "RT @KETV: Texans, NFL pledge $2M in Harvey flood relief https://t.co/aTKHJEiocf https://t.co/EhdJJpJLQr",
+        "true": "Tropical cyclone",
+        "pred": "Flood",
+        "confidence": 0.6014669986152232,
+        "event": "hurricane_harvey"
+      },
+      {
+        "id": "911851264467701760",
+        "text": "@CNN EPA head Scott Pruitt &amp; @realDonaldTrump #dotard twins #CNN #Maria #MexicoEarthquake #Healthcare #Trump #NKorea https://t.co/XNVd3II3jM",
+        "true": "Earthquake",
+        "pred": "Earthquake",
+        "confidence": 0.6069276982756069,
+        "event": "mexico_earthquake"
+      }
+    ],
+    "disaster_type/unsupported_categories": {
+      "note": "Landslide, Drought, Pollution, Chemical hazard, Extreme temperature, Emergency/SOS, Infrastructure, Storm, Other are NOT in CrisisMMD; the core model cannot predict them. The adapter routes such citizen-declared types to human review.",
+      "supported": [
+        "Earthquake",
+        "Flood",
+        "Tropical cyclone",
+        "Wildfire"
+      ]
+    },
+    "disaster_type/error_rate_by_event": {
+      "srilanka_floods": {
+        "n": 107,
+        "error_rate": 0.056074766355140186
+      },
+      "hurricane_harvey": {
+        "n": 568,
+        "error_rate": 0.02112676056338028
+      },
+      "hurricane_maria": {
+        "n": 542,
+        "error_rate": 0.00922509225092251
+      },
+      "iraq_iran_earthquake": {
+        "n": 73,
+        "error_rate": 0.0273972602739726
+      },
+      "hurricane_irma": {
+        "n": 548,
+        "error_rate": 0.0036496350364963502
+      },
+      "california_wildfires": {
+        "n": 240,
+        "error_rate": 0.04583333333333333
+      },
+      "mexico_earthquake": {
+        "n": 159,
+        "error_rate": 0.031446540880503145
+      }
+    },
+    "text_image_disagreement_in_dataset": [
+      {
+        "id": "906258753707790336",
+        "text": "RT @THS_College: On our way to Warrior Restoration to help organize donations for #hurricaneharvey! https://t.co/vMheEvAyew",
+        "label_text": "informative",
+        "label_image": "not_informative"
+      },
+      {
+        "id": "906219963152785408",
+        "text": "ZZ Top Donating ‘La Grange’ Download Sales To Hurricane Harvey Relief https://t.co/1toIN7bYEo via #IndieBrew https://t.co/R7DmfmG35F",
+        "label_text": "informative",
+        "label_image": "not_informative"
+      },
+      {
+        "id": "929989752400564226",
+        "text": "#BREAKING: Death toll in #Iran-#Iraq #earthquake reportedly climbs to 328 https://t.co/ZM0qSsTM9w https://t.co/HFyPs97nkb",
+        "label_text": "informative",
+        "label_image": "not_informative"
+      },
+      {
+        "id": "904706043690745856",
+        "text": "Houston, Corpus Christi, Beaumont &amp; SE Texas seeing mosquitoes w/ Zika Virus: https://t.co/xgScwx2OTn #Harvey #Texas https://t.co/Bh7agkhdac",
+        "label_text": "not_informative",
+        "label_image": "informative"
+      },
+      {
+        "id": "917835421073031168",
+        "text": "Cincinnati couple escapes California wildfires https://t.co/5A1O8RsA6l https://t.co/8pa3El1axH",
+        "label_text": "informative",
+        "label_image": "not_informative"
+      },
+      {
+        "id": "905664488505958401",
+        "text": "Latest projection is for hurricane Irma to make landfall at Trump's Mar-O Lago #karma https://t.co/LFnF988YzF",
+        "label_text": "informative",
+        "label_image": "not_informative"
+      },
+      {
+        "id": "921435015078207488",
+        "text": "(Metro):At least 31 cannabis farms go up in smoke as wildfires rip through #California :.. https://t.co/eQgI1MNGhq https://t.co/87ljsERLlK",
+        "label_text": "informative",
+        "label_image": "not_informative"
+      },
+      {
+        "id": "913837201246511104",
+        "text": "Everyone's thinking it. I said it. #FridayFeeling #WelfareState #HurricaneMaria https://t.co/1yKRqqEVuL",
+        "label_text": "informative",
+        "label_image": "not_informative"
+      }
+    ],
+    "text_image_disagreement_rate_test": {
+      "disagreeing_pairs": 703,
+      "total_pairs": 2237
+    }
+  }
+}

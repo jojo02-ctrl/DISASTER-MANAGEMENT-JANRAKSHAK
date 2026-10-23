@@ -1,0 +1,184 @@
+{
+  "dataset": "crisismmd-v2.0-datasplit-all",
+  "source": "https://crisisnlp.qcri.org/crisismmd",
+  "tasks": {
+    "informative": {
+      "train": {
+        "n": 11579,
+        "class_distribution": {
+          "informative": 8282,
+          "not_informative": 3297
+        }
+      },
+      "dev": {
+        "n": 2237,
+        "class_distribution": {
+          "informative": 1612,
+          "not_informative": 625
+        }
+      },
+      "test": {
+        "n": 2237,
+        "class_distribution": {
+          "not_informative": 625,
+          "informative": 1612
+        }
+      },
+      "label_source": "CrisisMMD text annotation (label_text)"
+    },
+    "disaster_type": {
+      "train": {
+        "n": 11579,
+        "class_distribution": {
+          "Wildfire": 1036,
+          "Flood": 613,
+          "Earthquake": 1253,
+          "Tropical cyclone": 8677
+        }
+      },
+      "dev": {
+        "n": 2237,
+        "class_distribution": {
+          "Earthquake": 249,
+          "Tropical cyclone": 1668,
+          "Wildfire": 210,
+          "Flood": 110
+        }
+      },
+      "test": {
+        "n": 2237,
+        "class_distribution": {
+          "Flood": 107,
+          "Tropical cyclone": 1658,
+          "Earthquake": 232,
+          "Wildfire": 240
+        }
+      },
+      "label_source": "CrisisMMD event_name metadata mapped to internal taxonomy (4 of 13 taxonomy classes covered)"
+    },
+    "humanitarian_category": {
+      "train": {
+        "n": 11580,
+        "class_distribution": {
+          "Other relevant information": 4266,
+          "Infrastructure and utility damage": 882,
+          "Not humanitarian": 3297,
+          "Affected individuals": 338,
+          "Rescue, volunteering or donation effort": 2384,
+          "Injured or dead people": 346,
+          "Vehicle damage": 39,
+          "Missing or found people": 28
+        }
+      },
+      "dev": {
+        "n": 2237,
+        "class_distribution": {
+          "Affected individuals": 67,
+          "Rescue, volunteering or donation effort": 453,
+          "Other relevant information": 844,
+          "Not humanitarian": 625,
+          "Vehicle damage": 8,
+          "Injured or dead people": 70,
+          "Infrastructure and utility damage": 164,
+          "Missing or found people": 6
+        }
+      },
+      "test": {
+        "n": 2237,
+        "class_distribution": {
+          "Rescue, volunteering or donation effort": 454,
+          "Not humanitarian": 625,
+          "Other relevant information": 844,
+          "Infrastructure and utility damage": 164,
+          "Injured or dead people": 70,
+          "Affected individuals": 67,
+          "Vehicle damage": 7,
+          "Missing or found people": 6
+        }
+      },
+      "label_source": "CrisisMMD text annotation (label_text)"
+    },
+    "damage_severity": {
+      "train": {
+        "n": 2140,
+        "class_distribution": {
+          "Severe": 1382,
+          "Little or none": 277,
+          "Mild": 481
+        }
+      },
+      "dev": {
+        "n": 512,
+        "class_distribution": {
+          "Severe": 324,
+          "Mild": 119,
+          "Little or none": 69
+        }
+      },
+      "test": {
+        "n": 520,
+        "class_distribution": {
+          "Little or none": 69,
+          "Severe": 328,
+          "Mild": 123
+        }
+      },
+      "label_source": "CrisisMMD IMAGE annotation used as proxy label for the paired tweet text (no text-level severity labels exist)"
+    }
+  },
+  "images_downloaded": false,
+  "raw_rows": {
+    "informative/train": 13608,
+    "informative/dev": 2237,
+    "informative/test": 2237,
+    "humanitarian/train": 13608,
+    "humanitarian/dev": 2237,
+    "humanitarian/test": 2237,
+    "damage/train": 2468,
+    "damage/dev": 529,
+    "damage/test": 529
+  },
+  "generated_at": "2026-09-05T10:59:51.905083Z",
+  "contamination_control": {
+    "informative": {
+      "train_before": 11584,
+      "removed_overlap_with_dev_test": 4,
+      "removed_exact_duplicates_in_train": 1,
+      "train_after": 11579
+    },
+    "humanitarian": {
+      "train_before": 11584,
+      "removed_overlap_with_dev_test": 2,
+      "removed_exact_duplicates_in_train": 2,
+      "train_after": 11580
+    },
+    "damage": {
+      "train_before": 2216,
+      "removed_overlap_with_dev_test": 76,
+      "removed_exact_duplicates_in_train": 0,
+      "train_after": 2140
+    }
+  },
+  "conflicting_multi_image_tweets_dropped": {
+    "informative": {
+      "train": 0,
+      "dev": 0,
+      "test": 0
+    },
+    "humanitarian": {
+      "train": 0,
+      "dev": 0,
+      "test": 0
+    },
+    "damage": {
+      "train": 70,
+      "dev": 7,
+      "test": 3
+    }
+  },
+  "modalities": {
+    "text": "available",
+    "image": "labels available, image files NOT downloaded in this build (2.1GB) -> image/multimodal experiments not conducted",
+    "structured_janrakshak_fields": "NOT present in CrisisMMD (urgency, sensorEvidence, aiDetection, GPS) -> handled only in Layer B fusion"
+  }
+}

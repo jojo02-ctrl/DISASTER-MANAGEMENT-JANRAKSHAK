@@ -1,0 +1,25 @@
+# D-Intel model configuration
+core_text_model:
+  family: tfidf_linear
+  ngram_min: 1
+  ngram_max: 2
+  min_df: 2
+  max_features: 40000
+  C: 4.0
+  candidates: tfidf_logreg,tfidf_logreg_balanced,tfidf_linearsvm,tfidf_linearsvm_balanced
+  selection_metric: dev_macro_f1
+  calibration: temperature_scaling
+transformer_text_model:
+  status: not_trained_in_this_build
+  base_model: distilbert-base-uncased
+  max_length: 128
+  epochs: 3
+  lr: 3e-5
+image_model:
+  status: not_trained_in_this_build
+  backbone: efficientnet_b0
+  reason: image files not downloaded; no GPU
+operational_fusion:
+  version: dintel-fusion-v1.0.0
+  kind: rule_based_untrained
+  learnable_when: verified_janrakshak_dataset >= 500 human-verified records

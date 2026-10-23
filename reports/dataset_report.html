@@ -1,0 +1,24 @@
+<!doctype html><html><head><meta charset='utf-8'><title>D-Intel Dataset Report</title><style>body{font-family:ui-monospace,Menlo,monospace;background:#0a0a0a;color:#e5e5e5;padding:32px;max-width:1100px;margin:auto}h1,h2{font-weight:500;letter-spacing:.02em}pre{background:#111;border:1px solid #222;padding:16px;overflow:auto;font-size:12px}table{border-collapse:collapse;width:100%;font-size:13px}td,th{border:1px solid #222;padding:6px 10px;text-align:left}th{color:#a3a3a3}small{color:#737373}</style></head><body><h1>D-Intel Dataset Report</h1><small>D-Intel · generated from JSON artefacts · no simulated numbers</small><p>crisismmd-v2.0-datasplit-all — https://crisisnlp.qcri.org/crisismmd</p><table><tr><th>task</th><th>split</th><th>n</th><th>classes</th></tr><tr><td>informative</td><td>train</td><td>11579</td><td>{&quot;informative&quot;: 8282, &quot;not_informative&quot;: 3297}</td></tr><tr><td>informative</td><td>dev</td><td>2237</td><td>{&quot;informative&quot;: 1612, &quot;not_informative&quot;: 625}</td></tr><tr><td>informative</td><td>test</td><td>2237</td><td>{&quot;not_informative&quot;: 625, &quot;informative&quot;: 1612}</td></tr><tr><td>disaster_type</td><td>train</td><td>11579</td><td>{&quot;Wildfire&quot;: 1036, &quot;Flood&quot;: 613, &quot;Earthquake&quot;: 1253, &quot;Tropical cyclone&quot;: 8677}</td></tr><tr><td>disaster_type</td><td>dev</td><td>2237</td><td>{&quot;Earthquake&quot;: 249, &quot;Tropical cyclone&quot;: 1668, &quot;Wildfire&quot;: 210, &quot;Flood&quot;: 110}</td></tr><tr><td>disaster_type</td><td>test</td><td>2237</td><td>{&quot;Flood&quot;: 107, &quot;Tropical cyclone&quot;: 1658, &quot;Earthquake&quot;: 232, &quot;Wildfire&quot;: 240}</td></tr><tr><td>humanitarian_category</td><td>train</td><td>11580</td><td>{&quot;Other relevant information&quot;: 4266, &quot;Infrastructure and utility damage&quot;: 882, &quot;Not humanitarian&quot;: 3297, &quot;Affected individuals&quot;: 338, &quot;Rescue, volunteering or donation effort&quot;: 2384, &quot;Injured or dead people&quot;: 346, &quot;Vehicle damage&quot;: 39, &quot;Missing or found people&quot;: 28}</td></tr><tr><td>humanitarian_category</td><td>dev</td><td>2237</td><td>{&quot;Affected individuals&quot;: 67, &quot;Rescue, volunteering or donation effort&quot;: 453, &quot;Other relevant information&quot;: 844, &quot;Not humanitarian&quot;: 625, &quot;Vehicle damage&quot;: 8, &quot;Injured or dead people&quot;: 70, &quot;Infrastructure and utility damage&quot;: 164, &quot;Missing or found people&quot;: 6}</td></tr><tr><td>humanitarian_category</td><td>test</td><td>2237</td><td>{&quot;Rescue, volunteering or donation effort&quot;: 454, &quot;Not humanitarian&quot;: 625, &quot;Other relevant information&quot;: 844, &quot;Infrastructure and utility damage&quot;: 164, &quot;Injured or dead people&quot;: 70, &quot;Affected individuals&quot;: 67, &quot;Vehicle damage&quot;: 7, &quot;Missing or found people&quot;: 6}</td></tr><tr><td>damage_severity</td><td>train</td><td>2140</td><td>{&quot;Severe&quot;: 1382, &quot;Little or none&quot;: 277, &quot;Mild&quot;: 481}</td></tr><tr><td>damage_severity</td><td>dev</td><td>512</td><td>{&quot;Severe&quot;: 324, &quot;Mild&quot;: 119, &quot;Little or none&quot;: 69}</td></tr><tr><td>damage_severity</td><td>test</td><td>520</td><td>{&quot;Little or none&quot;: 69, &quot;Severe&quot;: 328, &quot;Mild&quot;: 123}</td></tr></table><h2>Contamination control</h2><pre>{
+ &quot;informative&quot;: {
+  &quot;train_before&quot;: 11584,
+  &quot;removed_overlap_with_dev_test&quot;: 4,
+  &quot;removed_exact_duplicates_in_train&quot;: 1,
+  &quot;train_after&quot;: 11579
+ },
+ &quot;humanitarian&quot;: {
+  &quot;train_before&quot;: 11584,
+  &quot;removed_overlap_with_dev_test&quot;: 2,
+  &quot;removed_exact_duplicates_in_train&quot;: 2,
+  &quot;train_after&quot;: 11580
+ },
+ &quot;damage&quot;: {
+  &quot;train_before&quot;: 2216,
+  &quot;removed_overlap_with_dev_test&quot;: 76,
+  &quot;removed_exact_duplicates_in_train&quot;: 0,
+  &quot;train_after&quot;: 2140
+ }
+}</pre><h2>Modalities</h2><pre>{
+ &quot;text&quot;: &quot;available&quot;,
+ &quot;image&quot;: &quot;labels available, image files NOT downloaded in this build (2.1GB) -&gt; image/multimodal experiments not conducted&quot;,
+ &quot;structured_janrakshak_fields&quot;: &quot;NOT present in CrisisMMD (urgency, sensorEvidence, aiDetection, GPS) -&gt; handled only in Layer B fusion&quot;
+}</pre></body></html>

@@ -1,0 +1,15 @@
+{
+  "model_version": "dintel-fusion-v1.0.0",
+  "kind": "rule_based_untrained",
+  "learned": false,
+  "implementation": "src/lib/dintel/fusion.ts",
+  "priority": {
+    "formula": "0.45*E[severity] + 0.25*humanitarian_relevance + 0.15*P(informative) + 0.15*citizen_urgency + 0.05*min(3,independent_corroboration) - 0.10*contradiction",
+    "severity_weights": {"Severe": 1.0, "Mild": 0.5, "Little or none": 0.1},
+    "humanitarian_weights": {"Injured or dead people": 1.0, "Missing or found people": 1.0, "Affected individuals": 0.9, "Infrastructure and utility damage": 0.8, "Vehicle damage": 0.6, "Rescue, volunteering or donation effort": 0.6, "Other relevant information": 0.3, "Not humanitarian": 0.0},
+    "thresholds": {"CRITICAL": 0.75, "HIGH": 0.55, "MEDIUM": 0.35}
+  },
+  "independence_groups": ["report", "image", "devices", "device_gps"],
+  "review_rules": ["low calibrated confidence", "severe without independent corroboration", "text/image contradiction", "text/citizen-type contradiction", "unsupported or unknown hazard type", "missing sensor evidence for motion-sensitive event", "low vocabulary coverage (OOD)", "very short text", "unsupported language", "mesh-relayed without location", "high priority with limited confidence"],
+  "training_data_required_to_learn": "verified_janrakshak_dataset (human-verified labels only)"
+}

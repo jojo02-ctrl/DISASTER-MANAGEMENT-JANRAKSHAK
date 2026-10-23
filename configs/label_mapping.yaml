@@ -1,0 +1,69 @@
+version: "1.0.0"
+disaster_taxonomy:
+  - Flood
+  - Storm
+  - Tropical cyclone
+  - Earthquake
+  - Landslide
+  - Wildfire
+  - Extreme temperature
+  - Drought
+  - Pollution
+  - Chemical hazard
+  - Emergency / SOS
+  - Infrastructure
+  - Other environmental hazard
+core_model_supported:            # classes with real CrisisMMD supervision
+  - Flood
+  - Tropical cyclone
+  - Earthquake
+  - Wildfire
+crisismmd_event_to_disaster_type:
+  hurricane_harvey: Tropical cyclone
+  hurricane_irma: Tropical cyclone
+  hurricane_maria: Tropical cyclone
+  california_wildfires: Wildfire
+  mexico_earthquake: Earthquake
+  iraq_iran_earthquake: Earthquake
+  srilanka_floods: Flood
+compatibility_groups:            # used for agreement checks between citizen type / detector / model
+  hydro: [Flood, Storm, Tropical cyclone]
+  geo: [Earthquake, Landslide]
+  fire: [Wildfire]
+  climate: [Extreme temperature, Drought]
+  hazmat: [Pollution, Chemical hazard]
+  emergency: [Emergency / SOS]
+  infra: [Infrastructure]
+  other: [Other environmental hazard]
+janrakshak_type_aliases:
+  Flood: [flood, flooding, flash flood, waterlogging]
+  Storm: [storm, thunderstorm, heavy rain, lightning]
+  Tropical cyclone: [cyclone, hurricane, typhoon]
+  Earthquake: [earthquake, quake, tremor]
+  Landslide: [landslide, mudslide, rockfall]
+  Wildfire: [wildfire, forest fire, fire, bushfire]
+  Extreme temperature: [heatwave, cold wave]
+  Drought: [drought]
+  Pollution: [pollution, smog, air quality]
+  Chemical hazard: [chemical, gas leak, hazmat]
+  Emergency / SOS: [emergency, sos, medical]
+  Infrastructure: [infrastructure, building collapse, bridge collapse]
+informative: {informative: informative, not_informative: not_informative}
+humanitarian_category:
+  affected_individuals: Affected individuals
+  infrastructure_and_utility_damage: Infrastructure and utility damage
+  injured_or_dead_people: Injured or dead people
+  missing_or_found_people: Missing or found people
+  rescue_volunteering_or_donation_effort: Rescue, volunteering or donation effort
+  vehicle_damage: Vehicle damage
+  other_relevant_information: Other relevant information
+  not_humanitarian: Not humanitarian
+damage_severity:
+  severe_damage: Severe
+  mild_damage: Mild
+  little_or_no_damage: Little or none
+  note: CrisisMMD severity labels are IMAGE-level; the text head uses them as proxy labels for the paired tweet text.
+response_priority:
+  labels: [LOW, MEDIUM, HIGH, CRITICAL]
+  learned: false
+  note: derived operational layer; no ground-truth labels exist.

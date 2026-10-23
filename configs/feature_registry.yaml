@@ -1,0 +1,377 @@
+# D-Intel Feature Registry v1.0.0
+# status values: trained | derived | optional | unsupported | ignored
+# "training_available: false" means the public training corpus (CrisisMMD v2) does NOT contain the field.
+# Such fields are NEVER fed to the core model; they enter only Layer B (rule-based fusion) until a
+# verified JanRakshak dataset exists. No fake training data is ever generated to make a field usable.
+version: "1.0.0"
+features:
+  rawText:
+    source: JanRakshak
+    type: text
+    training_available: true
+    inference_available: true
+    transformation: dintel-norm-v1 -> TF-IDF(1-2gram)
+    used_by: text_encoder
+    privacy_level: sensitive (not logged unless LOG_RAW_TEXT=true)
+    status: trained
+    description: Primary citizen text. Precedence rawText > description > title.
+  description:
+    source: JanRakshak
+    type: text
+    training_available: true
+    inference_available: true
+    transformation: fallback text -> tokenizer
+    used_by: text_encoder
+    privacy_level: sensitive
+    status: trained
+    description: Fallback text when rawText absent.
+  title:
+    source: JanRakshak
+    type: text
+    training_available: true
+    inference_available: true
+    transformation: fallback text -> tokenizer
+    used_by: text_encoder
+    privacy_level: sensitive
+    status: trained
+    description: Last-resort text.
+  type:
+    source: JanRakshak
+    type: categorical
+    training_available: partial
+    inference_available: true
+    transformation: taxonomy mapping (configs/label_mapping.yaml) -> compatibility group
+    used_by: evidence_fusion (agreement + unsupported-type gate)
+    privacy_level: low
+    status: derived
+    description: Citizen-declared hazard. Not a core-model input (would be circular with disaster_type target); used to detect agreement / unsupported classes.
+  urgency:
+    source: JanRakshak
+    type: categorical
+    training_available: false
+    inference_available: true
+    transformation: ordinal scale LOW .25 / MEDIUM .5 / HIGH .75 / CRITICAL 1
+    used_by: evidence_fusion (priority)
+    privacy_level: low
+    status: optional_until_training_data_exists
+    description: Existing phone-side urgency.
+  score:
+    source: JanRakshak
+    type: numeric
+    training_available: false
+    inference_available: true
+    transformation: "/10 clip[0,1]"
+    used_by: evidence_fusion (priority fallback)
+    privacy_level: low
+    status: optional_until_training_data_exists
+    description: Existing triage score.
+  confidence:
+    source: JanRakshak
+    type: numeric
+    training_available: false
+    inference_available: true
+    transformation: clip[0,1]
+    used_by: evidence_fusion (report-group evidence, never counted as independent)
+    privacy_level: low
+    status: optional_until_training_data_exists
+    description: Phone-side triage confidence.
+  aiDetection.label:
+    source: JanRakshak (YOLO/TFLite)
+    type: categorical
+    training_available: false
+    inference_available: true
+    transformation: detector label -> compatibility group (unknown -> null)
+    used_by: evidence_fusion (evidence_agreement)
+    privacy_level: low
+    status: optional_until_training_data_exists
+    description: External detector class. Never assumed to exist.
+  aiDetection.confidence:
+    source: JanRakshak (YOLO/TFLite)
+    type: numeric
+    training_available: false
+    inference_available: true
+    transformation: clip[0,1]
+    used_by: evidence_fusion (image independence group)
+    privacy_level: low
+    status: optional_until_training_data_exists
+    description: Detector confidence.
+  aiDetection.model:
+    source: JanRakshak
+    type: string
+    training_available: false
+    inference_available: true
+    transformation: none (metadata only)
+    used_by: trace
+    privacy_level: low
+    status: ignored
+    description: Model name retained for audit, not a predictive shortcut.
+  aiVision:
+    source: JanRakshak
+    type: object
+    training_available: false
+    inference_available: true
+    transformation: presence flag only (schema not yet fixed)
+    used_by: evidence_fusion (presence)
+    privacy_level: low
+    status: optional_until_training_data_exists
+    description: Structured vision evidence.
+  imageStorageRef:
+    source: JanRakshak
+    type: string
+    training_available: false
+    inference_available: true
+    transformation: reference only (image not fetched in v1)
+    used_by: input_summary
+    privacy_level: medium
+    status: available_at_inference_but_not_used
+    description: Object-storage reference; image encoder not trained in v1.
+  sensorEvidence.deviceCount:
+    source: JanRakshak
+    type: numeric
+    training_available: false
+    inference_available: true
+    transformation: log1p
+    used_by: SensorEvidenceEncoder -> evidence_fusion
+    privacy_level: low
+    status: optional_until_training_data_exists
+    description: Number of corroborating devices.
+  sensorEvidence.clusterRadiusMeters:
+    source: JanRakshak
+    type: numeric
+    training_available: false
+    inference_available: true
+    transformation: "/500 clip[0,1]"
+    used_by: SensorEvidenceEncoder
+    privacy_level: low
+    status: optional_until_training_data_exists
+    description: Spatial extent of the device cluster.
+  sensorEvidence.eventDurationMs:
+    source: JanRakshak
+    type: numeric
+    training_available: false
+    inference_available: true
+    transformation: log1p
+    used_by: SensorEvidenceEncoder
+    privacy_level: low
+    status: optional_until_training_data_exists
+    description: Duration of the detected anomaly.
+  sensorEvidence.clusterScore:
+    source: JanRakshak
+    type: numeric
+    training_available: false
+    inference_available: true
+    transformation: clip[0,1]
+    used_by: SensorEvidenceEncoder -> evidence_fusion
+    privacy_level: low
+    status: optional_until_training_data_exists
+    description: Aggregated cluster score.
+  sensorEvidence.sensorAgreement:
+    source: JanRakshak
+    type: numeric
+    training_available: false
+    inference_available: true
+    transformation: clip[0,1]
+    used_by: SensorEvidenceEncoder
+    privacy_level: low
+    status: optional_until_training_data_exists
+    description: Agreement across devices.
+  sensorEvidence.spatialCorrelation:
+    source: JanRakshak
+    type: numeric
+    training_available: false
+    inference_available: true
+    transformation: clip[0,1]
+    used_by: SensorEvidenceEncoder
+    privacy_level: low
+    status: optional_until_training_data_exists
+    description: Spatial correlation.
+  sensorEvidence.temporalCorrelation:
+    source: JanRakshak
+    type: numeric
+    training_available: false
+    inference_available: true
+    transformation: clip[0,1]
+    used_by: SensorEvidenceEncoder
+    privacy_level: low
+    status: optional_until_training_data_exists
+    description: Temporal correlation.
+  sensorEvidence.confidence:
+    source: JanRakshak
+    type: numeric
+    training_available: false
+    inference_available: true
+    transformation: clip[0,1]
+    used_by: evidence_fusion (devices independence group)
+    privacy_level: low
+    status: optional_until_training_data_exists
+    description: Phone-side confidence of the sensor consensus.
+  sensorEvidence.eventType:
+    source: JanRakshak
+    type: categorical
+    training_available: false
+    inference_available: true
+    transformation: categorical (embedding reserved for learned fusion)
+    used_by: evidence_fusion
+    privacy_level: low
+    status: optional_until_training_data_exists
+    description: e.g. CORRELATED_PHYSICAL_ANOMALY.
+  sensor_present:
+    source: derived
+    type: binary
+    training_available: false
+    inference_available: true
+    transformation: modality mask (sensorEvidence != null)
+    used_by: evidence_fusion
+    privacy_level: low
+    status: derived
+    description: Explicit missingness indicator; sensor_present=0 is NOT deviceCount=0.
+  lat:
+    source: JanRakshak
+    type: float
+    training_available: false
+    inference_available: true
+    transformation: location adapter -> accuracy_quality, in_india_bbox (coarse context only; raw coordinate never a model feature)
+    used_by: evidence_fusion (location confidence)
+    privacy_level: high (never logged)
+    status: derived
+    description: Latitude.
+  lng:
+    source: JanRakshak
+    type: float
+    training_available: false
+    inference_available: true
+    transformation: location adapter
+    used_by: evidence_fusion
+    privacy_level: high (never logged)
+    status: derived
+    description: Longitude.
+  accuracyM:
+    source: JanRakshak
+    type: numeric
+    training_available: false
+    inference_available: true
+    transformation: precise<=25m / moderate<=150m / coarse
+    used_by: evidence_fusion (location confidence)
+    privacy_level: low
+    status: derived
+    description: GPS accuracy in metres.
+  city:
+    source: JanRakshak
+    type: string
+    training_available: false
+    inference_available: true
+    transformation: none
+    used_by: trace
+    privacy_level: medium
+    status: available_at_inference_but_not_used
+    description: Reverse-geocoded city.
+  stateName:
+    source: JanRakshak
+    type: string
+    training_available: false
+    inference_available: true
+    transformation: none
+    used_by: trace
+    privacy_level: medium
+    status: available_at_inference_but_not_used
+    description: State.
+  language:
+    source: JanRakshak
+    type: categorical
+    training_available: false
+    inference_available: true
+    transformation: language gate (en/en-IN supported)
+    used_by: language_warning
+    privacy_level: low
+    status: derived
+    description: Declared language.
+  meshHopCount:
+    source: JanRakshak
+    type: numeric
+    training_available: false
+    inference_available: true
+    transformation: relayed flag
+    used_by: "evidence_fusion (review rule: relayed without location)"
+    privacy_level: low
+    status: optional
+    description: Mesh relay hops.
+  isMeshRouted:
+    source: JanRakshak
+    type: boolean
+    training_available: false
+    inference_available: true
+    transformation: relayed flag
+    used_by: evidence_fusion
+    privacy_level: low
+    status: optional
+    description: Mesh transport flag.
+  rawAudioBlobId:
+    source: JanRakshak
+    type: string
+    training_available: false
+    inference_available: true
+    transformation: presence flag
+    used_by: input_summary
+    privacy_level: high
+    status: available_at_inference_but_not_used
+    description: Audio not processed in v1.
+  userId:
+    source: JanRakshak
+    type: identity
+    training_available: false
+    inference_available: true
+    transformation: dropped
+    used_by: none
+    privacy_level: identity
+    status: ignored
+    description: Identity - never a feature.
+  reporterId:
+    source: JanRakshak
+    type: identity
+    training_available: false
+    inference_available: true
+    transformation: dropped
+    used_by: none
+    privacy_level: identity
+    status: ignored
+    description: Identity - never a feature.
+  userEmail:
+    source: JanRakshak
+    type: identity
+    training_available: false
+    inference_available: true
+    transformation: dropped
+    used_by: none
+    privacy_level: identity
+    status: ignored
+    description: Identity - never a feature.
+  reviewStatus:
+    source: JanRakshak
+    type: operational_state
+    training_available: false
+    inference_available: true
+    transformation: dropped
+    used_by: none
+    privacy_level: low
+    status: ignored
+    description: Downstream operational state (would leak the review outcome).
+  autoDispatched:
+    source: JanRakshak
+    type: operational_state
+    training_available: false
+    inference_available: true
+    transformation: dropped
+    used_by: none
+    privacy_level: low
+    status: ignored
+    description: Outcome field - target leakage risk.
+  etaMinutes:
+    source: JanRakshak
+    type: operational_state
+    training_available: false
+    inference_available: true
+    transformation: dropped
+    used_by: none
+    privacy_level: low
+    status: ignored
+    description: Response outcome - never an input.

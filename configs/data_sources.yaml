@@ -1,0 +1,51 @@
+primary:
+  - dataset_name: CrisisMMD v2.0 (data splits)
+    source: Qatar Computing Research Institute (Alam, Ofli, Imran)
+    license: research use; cite ICWSM 2018 / ISCRAM 2020 papers
+    url: https://crisisnlp.qcri.org/crisismmd
+    resolution: tweet-level text + image-level labels, 7 events (2017)
+    join_method: n/a (primary corpus)
+    used_in_this_build: text + labels only (images NOT downloaded; 2.1GB)
+    known_limitations: English tweets, 2017 US/Caribbean/Mexico/Iran-Iraq/Sri Lanka events, hurricane-heavy; severity labels are image-level; no GPS, no sensor, no urgency, no YOLO fields.
+optional_context_datasets:      # NOT downloaded/used in v1 — documented for the location adapter roadmap
+  - dataset_name: WorldPop population density
+    source: WorldPop
+    license: CC BY 4.0
+    url: https://www.worldpop.org
+    resolution: 100m / 1km raster
+    join_method: lat/lng -> raster lookup
+    known_limitations: modelled estimates; year mismatch
+    status: not_integrated
+  - dataset_name: SRTM / Copernicus DEM elevation
+    source: NASA / ESA
+    license: public domain / free with attribution
+    url: https://www.earthdata.nasa.gov
+    resolution: 30m
+    join_method: lat/lng -> raster lookup
+    known_limitations: voids in mountainous areas
+    status: not_integrated
+  - dataset_name: EM-DAT disaster frequency
+    source: CRED
+    license: free for non-commercial research, registration required
+    url: https://www.emdat.be
+    resolution: country/admin1 events
+    join_method: state -> historical event counts
+    known_limitations: reporting bias, coarse geography
+    status: not_integrated
+  - dataset_name: IMD gridded rainfall
+    source: India Meteorological Department
+    license: research use on request
+    url: https://www.imdpune.gov.in
+    resolution: 0.25 deg daily
+    join_method: lat/lng + date
+    known_limitations: India only; temporal alignment required
+    status: not_integrated
+future_operational_dataset:
+  - dataset_name: verified_janrakshak_dataset
+    source: JanRakshak operators (human-verified labels only)
+    license: internal
+    url: n/a (PostgreSQL table verified_janrakshak_dataset)
+    resolution: incident
+    join_method: request_id
+    known_limitations: does not exist yet; required before Layer B can be learned or JanRakshak ablations run
+    status: collection_mechanism_implemented

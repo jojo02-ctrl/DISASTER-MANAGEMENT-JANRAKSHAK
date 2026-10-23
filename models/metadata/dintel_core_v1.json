@@ -1,0 +1,71 @@
+{
+  "model_version": "dintel-core-v1.0.0",
+  "dataset_version": "crisismmd-v2.0-datasplit-all",
+  "training_timestamp": "2026-09-05T10:59:58.728593Z",
+  "git_commit": "unavailable",
+  "architecture": "shared TF-IDF(1-2gram, sublinear) -> per-task linear heads (LogReg / LinearSVM selected on dev) -> temperature scaling",
+  "hyperparameters": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_features": 40000,
+    "sublinear_tf": true,
+    "vocab_size": 24715,
+    "event_name_masking": true
+  },
+  "label_mapping_version": "1.0.0",
+  "feature_registry_version": "1.0.0",
+  "calibration_version": "temp-scaling-v1",
+  "text_normalizer": "dintel-norm-v1",
+  "tasks": {
+    "informative": {
+      "classes": [
+        "informative",
+        "not_informative"
+      ],
+      "model_type": "tfidf_logreg_balanced",
+      "temperature": 0.8550000000000001,
+      "calibration_status": "calibrated_temperature_scaling_dev"
+    },
+    "humanitarian_category": {
+      "classes": [
+        "Affected individuals",
+        "Infrastructure and utility damage",
+        "Injured or dead people",
+        "Missing or found people",
+        "Not humanitarian",
+        "Other relevant information",
+        "Rescue, volunteering or donation effort",
+        "Vehicle damage"
+      ],
+      "model_type": "tfidf_linearsvm_balanced",
+      "temperature": 0.3,
+      "calibration_status": "calibrated_temperature_scaling_dev"
+    },
+    "damage_severity": {
+      "classes": [
+        "Little or none",
+        "Mild",
+        "Severe"
+      ],
+      "model_type": "tfidf_logreg_balanced",
+      "temperature": 1.0650000000000002,
+      "calibration_status": "calibrated_temperature_scaling_dev"
+    },
+    "disaster_type": {
+      "classes": [
+        "Earthquake",
+        "Flood",
+        "Tropical cyclone",
+        "Wildfire"
+      ],
+      "model_type": "tfidf_linearsvm_balanced",
+      "temperature": 0.26222222222222225,
+      "calibration_status": "calibrated_temperature_scaling_dev"
+    }
+  },
+  "sha256": "5444b4fe2f8a54f0df3b3d4a8a5ccc1782c5e09adafb682618cb3c8969a7ee82",
+  "size_bytes": 4705188
+}
